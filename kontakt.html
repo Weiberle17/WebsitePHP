@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html lang="de">
+  <!-- Defines languages of content : german -->
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Make website responsive -->
+    <meta name="TlR Kontaktseite"
+      content="Kontaktseite der Tennislehrenden Reutlingen">
+      <!-- Short explanation of website content -->
+    <title>TlR Kontaktseite</title>
+    <!-- Name of website -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+      <!-- Link to css stylesheet-->
+  </head>
+  <body>    
+    <!-- Defines what is displayed on top of the page -->
+    <header>
+    <!-- Navigation between webpages -->
+    <nav>
+      <h1>TlR Kontaktseite</h1>
+        
+        <div class="menu">
+          <a href="index.html">Startseite</a>
+          <a href="preise.html">Preise</a>
+          <a class="active">Kontakt</a>
+          <a href="login.html">Login</a>
+        </div>
+          
+        <button class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+          
+      <div class="mobile">
+        <a href="index.html">Startseite</a>
+        <a href="preise.html">Preise</a>
+        <a class="active">Kontakt</a>
+        <a href="login.html">Login</a>
+      </div>
+      
+    </header>
+    <!-- Main content of website -->
+    <h4>Bei Fragen und Anregungen füllen Sie bitte das folgende Formular aus, oder schreiben uns eine E-Mail<br>
+      Wir werden so früh wie möglich darauf eingehen.
+    </h4><br>
+    <form class="center" id="kontakt" method="post" autocomplete="off" action="php/kontakt.php">
+      <label for="name">Ihr Name</label><br>
+      <input name="name" placeholder="Max Mustermann" required><br><br>
+      <label for="gender">Bitte geben Sie Ihr Geschlecht an</label>
+      <fieldset id="gender">
+        <input type="radio" name="gender" value="male">
+        <label for="male">Mann</label>
+        <input type="radio" name="gender" value="female">
+        <label for="female">Frau</label>
+        <input type="radio" name="gender" value="divers">
+        <label for="divers">Divers</label>
+        <input type="radio" name="gender" value="noComment" checked>
+        <label for="noComment">Keine Angabe</label>
+      </fieldset><br>
+      <label for="mail">Ihre E-Mail</label><br>
+      <input name="mail" type="email" placeholder="Max.Mustermann@gmail.com" size=30 required><br><br>
+      <label for="thema">Bitte geben Sie an auf was sich Ihre Anfrage bezieht</label><br>
+      <select name="thema" class="dropdown">
+        <option value="Generelles">Generelles</option>
+        <option value="Anfragen zu bestehenden Terminen">Anfragen zu bestehenden Terminen</option>
+        <option value="Buchung von Stunden">Buchung von Stunden</option>
+        <option value="Finanzielles">Finanzielles</option>
+      </select><br><br>
+      <label for="message">Nachricht</label><br>
+      <textarea name="message" rows="8" required></textarea><br><br>
+      <input type="submit" value="Überprüfen">
+    </form><br>
+    <p>Oder kontaktieren sie uns direkt per <a href="mailto: Manfred.Sander@dhbw-stuttgart.de">E-Mail.</a></p>
+  <script src="js/nav.js"></script>
+  </body>
+</html>

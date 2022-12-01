@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html lang="de">
+  <!-- Defines languages of content : german -->
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Make website responsive -->
+    <meta name="TlR Preise"
+      content="Preisuebersicht der Tennislehrenden Reutlingen">
+      <!-- Short explanation of website content -->
+    <title>Preise der TlR</title>
+    <!-- Name of website -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+      <!-- Link to css stylesheet-->
+  </head>
+  <body>
+    <!-- Defines what is displayed on top of the page -->
+    <header>
+    <!-- Navigation between webpages -->
+    <nav>
+      <h1>Unsere Preise</h1>
+        
+        <div class="menu">
+          <a href="index.html">Startseite</a>
+          <a class="active">Preise</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="login.html">Login</a>
+        </div>
+          
+        <button class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+          
+      <div class="mobile">
+        <a href="index.html">Startseite</a>
+        <a class="active">Preise</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="login.html">Login</a>
+      </div>
+      
+    </header>
+    <!-- Main content of website -->
+    <form class="center" id="preise" method="post" action="php/preise.php">
+      <h4>Bei welchem Lehrenden wollen Sie Ihre Stunde haben?</h4>
+      <fieldset>
+        <input type="radio" name="teacher" value="Matthias">
+        <label for="Matthias">Matthias</label>
+        <input type="radio" name="teacher" value="Jochen">
+        <label for="Jochen">Jochen</label>
+        <input type="radio" name="teacher" value="Thomas">
+        <label for="Thomas">Thomas</label>
+        <input type="radio" name="teacher" value="Unbestimmt" checked>
+        <label for="Unbestimmt">Unbestimmt</label>
+      </fieldset><br>
+      <h4>Geben Sie an für wie viele Stunden Sie sich interessieren</h4>
+      <input type="number" min="0" name="hours"><br><br>
+      <h4>Bitte geben Sie den gewünschten Wochentag an</h4>
+      <select name="wdays" class="dropdown">
+        <option value="week">Unter der Woche</option>
+        <option value="saturday">Samstags</option>
+        <option value="sunday">Sonn- und Feiertage</option>
+      </select>
+        <input type="submit"value="Berechnen">
+    </form>
+    <script src="js/nav.js"></script>
+  </body>
+</html>

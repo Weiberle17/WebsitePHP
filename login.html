@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html lang="de">
+  <!-- Defines languages of content : german -->
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Make website responsive -->
+    <meta name="TlR Login"
+      content="Loginseite der Tennislehrenden Reutlingen">
+      <!-- Short explanation of website content -->
+    <title>TlR Login</title>
+    <!-- Name of website -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+      <!-- Link to css stylesheet-->
+  </head>
+    <body>
+    <!-- Defines what is displayed on top of the page -->
+    <header>
+    <!-- Navigation between webpages -->
+    <nav>
+       <h1>Login</h1> 
+        <div class="menu">
+          <a href="index.html">Startseite</a>
+          <a href="preise.html">Preise</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="active">Login</a>
+        </div>
+          
+        <button class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+          
+      <div class="mobile">
+        <a href="index.html">Startseite</a>
+        <a href="preise.html">Preise</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a class="active">Login</a>
+      </div>
+      
+    </header>
+    <!-- Main content of website -->
+    <h3>Loggen Sie sich ein um Termine zu buchen, oder Ihre gebuchten Termine einzusehen</h3><br>
+      <!-- Form to insert login data -->
+    <form class="center" id="login" method="post" autocomplete="off" action="php/login.php">
+      <label for="username">Benutzername</label>
+      <input type="text" name="username" placeholder="Benutzername" required><br>
+      <label for="password">Passwort</label>
+      <input type="password" name="password" placeholder="Passwort" required><br>
+      <input type="submit" value="Einloggen">
+    </form>
+  <script src="js/nav.js"></script>
+  </body>
+</html>

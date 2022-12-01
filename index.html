@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html lang="de">
+  <!-- Defines languages of content : german -->
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Make website responsive -->
+    <meta name="TlR Startseite"
+      content="Informationsseite zu den Tennislehrenden Reutlingen">
+      <!-- Short explanation of website content -->
+    <title>Tennislehrende Reutlingen</title>
+    <!-- Name of website -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+      <!-- Link to css stylesheet-->
+  </head>
+  <body>
+    <!-- Defines what is displayed on top of the page -->
+    <header>
+    <!-- Navigation between webpages -->
+    <nav>
+      <h1>Tennislehrende Reutlingen</h1>
+        
+        <div class="menu">
+          <a class="active">Startseite</a>
+          <a href="preise.html">Preise</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="login.html">Login</a>
+        </div>
+          
+        <button class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+          
+      <div class="mobile">
+        <a class="active">Startseite</a>
+        <a href="preise.html">Preise</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="login.html">Login</a>
+      </div>
+      
+    </header>
+    <!-- Main content of website -->
+    <h2>Wir stellen uns vor</h2>
+    <h3>Matthias Hanke</h3>
+    <img class="center" src="img/matthias.jpeg" alt="Portrait Matthias Hanke"><br>
+    <h3>Jochen Schmidt</h3>
+    <img class="center" src="img/jochen.jpeg" alt="Portrait Jochen Schmidt"><br>
+    <h3>Thomas Müller</h3>
+    <img class="center" src="img/thomas.jpeg" alt="Portrait Thomas Müller"><br>
+    <form method="post" action="php/index.php">
+      <h2>Wenn Sie genauere Informationen zu den Trainern wollen können Sie sie hier auswählen (Mehrfachauswahl möglich)</h2><br>
+      <select id="index" multiple="multiple" name="infos[]" class="center" size='3'>
+        <!-- <option value="Sie haben keine Person ausgewählt">Bitte auswählen</option> -->
+        <option value="
+          <h2>Matthias Hanke</h2>
+          <p>
+          Alter: 35 Jahre <br>
+          Qualifikation:
+          <ul>
+          <li>15 Jahre Trainererfahrung</li>
+          <li>A-Jugend Sieger der deutschen Meisterschaft</li>
+          <li>Beste Weltranglistenplatzierung: 155</li>
+          <li>Trainer-A-Lizenz des deutschen Tennisbandes</li>
+          </ul>
+          </p>"
+        >Matthias Hanke</option>
+        <option value="
+          <h2>Jochen Schmidt</h2>
+          <p>
+          Alter: 54 Jahre <br>
+          Qualifikation:
+          <ul>
+          <li>28 Jahre Trainererfahrung</li>
+          <li>Trainer-B-Lizenz des deutschen Tennisverbandes</li>
+          <li>Deutscher Meister als Trainer 15/16</li>
+          <li>Vize-Meister als Trainer 09/10</li>
+          </ul>
+          </p>"
+        >Jochen Schmidt</option>
+        <option value="
+          <h2>Thomas Müller</h2>
+          <p>
+          Alter: 23 Jahre <br>
+          Qualifikation:
+          <ul>
+          <li>Im zweiten Jahr als Trainer</li>
+          <li>In dieser Saison wird er die Prüfung zur Trainer-A-Lizenz ablegen</li>
+          <li>Beste Weltranglistenplatzierung: 125</li>
+          <li>Musste seine Karriere aufgrund von Verletzungen vorzeitig beenden</li>
+          </ul>
+          </p>"
+        >Thomas Müller</option>
+      </select><br>
+        <input class="center" type="submit" value="Anzeigen">
+    </form><br><br>
+      <script src="js/nav.js"></script>
+  </body>
+</html>

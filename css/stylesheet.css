@@ -1,0 +1,286 @@
+/* verwendete Farben */
+:root {
+  --primary: #4c566a;
+  --light: #EEEEEE;
+  --dark: #2e3440;
+  --accent: #b48ead;
+}
+/* Allgemein gueltige Anweisungen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: broder-box;
+  font-family: sans-serif;
+}
+
+/* Anweisungen fuer Navigationsleiste, um sie an Fenstergroessen anzupassen */
+/* Generelle Navigationsleiste Anweisungen */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--dark);
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Anweisungen fuer Ueberschrift h1 in Navigationsleiste */
+nav h1 {
+  color: var(--light);
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* Anweisungen fuer mobiles Icon bei schmaler Fenstergroesse */
+.icon {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Anweisungen um die drei Balken darzustellen */
+.icon span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: var(--light);
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+/* Anweisungen um den zweiten Balken zu verschieben und einzufaerben beim Hovern der Maus */
+.icon:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--accent);
+}
+
+/* Anweisungen um bei anklicken zwischen drei parallelen Balken und einem X zu wechseln */
+/* Veraenderungen des ersten Balkens */
+.icon.active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+/* Veraenderungen des zweiten Balkens */
+.icon.active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+/* Veraenderungen des dritten Balkens */
+.icon.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+/* Accentfarbe verwenden, wenn Maus ueber X hovert */
+.icon.active:hover span {
+  background-color: var(--accent);
+}
+
+/* Anweisungen fuer mobiles Navigationsmenue */
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  padding-top: 6rem;
+  opacity: 1;
+  transform: translateY(-100%);
+  background-color: var(--dark);
+  color: var(--light);
+  transition: 0.3s;
+}
+
+/* Anweisungen fuer Anzeige des mobilen Navigationsmenues */
+.mobile.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Anweisungen, wie Elemente des mobilen Navigationsmenue aussehen sollen */
+.mobile a {
+  display: block;
+  padding: 1rem;
+  color: var(--light);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+
+/* Anweisungen, wie Elemente beim Hovern der Maus bzw. im aktiven Zustand aussehen */
+.mobile a.active, a:hover {
+  color: var(--light);
+  background-color: var(--accent);
+}
+
+/* Anweisungen fuer die Ansicht bei grossen Fenstern */
+.menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -1rem;
+}
+
+/* Anweisungen fuer a tags in der Klasse menu */
+.menu a {
+  color: var(--light);
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+/* Anweisungen, wie Elemente beim Hovern der Maus bzw. im aktiven Zustand aussehen */
+.menu a.active, .menu a:hover {
+  background-color: var(--accent);
+}
+
+
+/* Anweisungen fuer Navigationsleiste, wenn Fenster eine Mindesgroesse ueberschreitet */
+@media (min-width: 1100px) {
+  /* Balken ausblenden, wenn Fenster bestimmte Groesse erreicht */
+  .icon, .mobile {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
+/* Ende der Anweisungen fuer Navigationsleiste */
+
+/* Beginn der generellen Anweisungen fuer die Seite */
+/* Anweisungen fuer die Klasse center */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+}
+
+/* Anweisungen fuer den gesamten Bodyteil der Seite */
+body {
+  color: var(--light);
+  background-color: var(--primary);
+  margin-top: 110px;
+}
+
+/* Anweisungen fuer Ueberschriften 2. Grades */
+h2 {
+  padding: 1rem;
+}
+
+/* Anweisungen fuer Ueberschriften 3. Grades */
+h3 {
+  padding: 0.6rem;
+}
+
+/* Anweisungen fuer Ueberschriften 2. und 3. Grades */
+h2, h3 {
+  background-color: var(--dark);
+  text-align: center;
+}
+
+/* Anweisungen fuer Ueberschriften 4. Grades */
+h4 {
+  font-size: 1.2rem;
+}
+
+/* Anweisungen fuer input Elemente */
+input {
+  border: none;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 3px;
+}
+
+/* Anweisungen fuer optionen und input Elemente, wenn die Maus darueber hovert */
+option:hover, input:hover {
+  background-color: var(--accent);
+}
+
+/* Anweisungen fuer ausgewaehlte Optionen */
+option:checked {
+  appearance: none;
+  background-color: var(--primary);
+}
+
+/* Anweisungen fuer alle Labelelemente */
+label {
+  font-size: 1.1rem;
+}
+
+/* Generelle Anweisungen fuer Tabellen */
+table, th, td {
+  border: 1px solid var(--dark);
+  border-collapse: collapse;
+}
+
+/* Anweisungen fuer p-Abschnitte */
+p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Anweisungen fuer a-Referenzen in p-Abschnitten */
+p a {
+  appearance: none;
+  color: var(--light);
+}
+
+/* Anweisungen fuer das Multiple Eingabefeld auf der Index.html Seite */
+#index {
+  appearance: none;
+  background-color: var(--dark);
+  border: none;
+  cursor: pointer;
+  color: var(--light);
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+
+/* Anweisungen fuer das Formular Login */
+#login {
+  font-size: 1.5rem;
+}
+
+/* Anweisungen fuer die zwei Tabellen Booked und Preise */
+#tableBooked, #tablePreise {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* Anweisungen fuer die Dropdownliste auf Preise.html */
+.dropdown {
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  padding: 0.2rem;
+}
+
+/* Anweisungen fuer das Hovern ueber der Dropdownliste */
+.dropdown:hover {
+  background-color: var(--accent);
+}

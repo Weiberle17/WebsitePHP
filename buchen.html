@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Defines types of documents : Html 5.O -->
+<html lang="de">
+  <!-- Defines languages of content : german -->
+  <head>
+    <!-- Information about website and creator -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Make website responsive -->
+    <meta name="TlR mein Profil"
+      content="Übersichtsseite des angemeldeten Profils">
+      <!-- Short explanation of website content -->
+    <title>TlR Mein Profil</title>
+    <!-- Name of website -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+      <!-- Link to css stylesheet-->
+  </head>
+  <body>
+    <!-- Defines what is displayed on top of the page -->
+    <header>
+    <!-- Navigation between webpages -->
+    <nav>
+      <h1>Ihre Termine</h1>
+        
+        <div class="menu">
+          <a href="index.html">Startseite</a>
+          <a href="preise.html">Preise</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="login.html">Login</a>
+        </div>
+          
+        <button class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    </nav>
+          
+      <div class="mobile">
+        <a href="index.html">Startseite</a>
+        <a href="preise.html">Preise</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="login.html">Login</a>
+      </div>
+      
+    </header>
+    <!-- Main content of website -->
+    <h2>Anstehende Termine</h2><br>
+    <table style="margin-left:auto;margin-right:auto;" id="tableBooked">
+      <tr><th style="min-width:20%;">Datum</th><th style="min-width: 20%;">Tennislehrer</th><th style="min-width: 20%;">Gebuchte Zeit</th></tr>
+      <tr><td>03.11.22</td><td>Matthias</td><td>120 Min.</td></tr>
+      <tr><td>10.11.22</td><td>Matthias</td><td>150 Min.</td></tr>
+      <tr><td>17.11.22</td><td>Matthias</td><td>120 Min.</td></tr>
+    </table><br>
+    <h2>Bereits wahrgenommene Termine</h2><br>
+    <p>Sie haben aktuell noch keine bereits wahrgenommenen Termine.</p><br>
+  <script src="js/nav.js"></script>
+  </body>
+</html>
